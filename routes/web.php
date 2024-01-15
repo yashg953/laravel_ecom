@@ -40,3 +40,9 @@ Route::get("login",function(){
 });
 Route::view("userpage","/userpage");
 Route::view("noaccess","/noaccess");
+
+Route::view('home','/home');
+
+Route::group(['middleware'=>['protectPage','protectPage_2']],function(){
+    Route::view('home1','/home1');
+});

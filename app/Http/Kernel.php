@@ -45,6 +45,12 @@ class Kernel extends HttpKernel
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+        'protectPage' => [
+            \App\Http\Middleware\GropuMiddleware::class
+        ],
+        'protectPage_2' => [
+            \App\Http\Middleware\GroupMiddleware_2::class
+        ]
     ];
 
     /**
