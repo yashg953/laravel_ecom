@@ -46,3 +46,4 @@ Route::view('home','/home');
 Route::group(['middleware'=>['protectPage','protectPage_2']],function(){
     Route::view('home1','/home1');
 });
+Route::view('routemiddleware','/routemiddleware')->middleware('protectPage');
